@@ -2,7 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
-## makeCacheMatrix uses scoping rules and stores matrices in memory
+## makeCacheMatrix uses scoping rules and stores matrices in memory. This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(X = matrix()) {
   inverse <- NULL
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(X = matrix()) {
 }
 
 ## Write a short comment describing this function
-## cacheSolve uses corpcor, a library that avoids determinants and uses orthogonal descomposition
+## cacheSolve uses corpcor, a library that avoids determinants and uses orthogonal descomposition. This function computes the inverse of the special "matrix" returned by makeCacheMatrix
 cacheSolve <- function(X, ...) 
 {
   if(require("corpcor")){
